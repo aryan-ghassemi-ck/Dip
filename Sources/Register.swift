@@ -64,7 +64,7 @@ extension DependencyContainer {
     threadSafe {
       let key = DefinitionKey(type: T.self, typeOfArguments: U.self, tag: tag?.dependencyTag)
       if let _ = definitions[key] {
-        assertionFailure("DUPWARNING: Overwriting existing definition for type \(T.self). This may cause unexpected behavior if you're relying on the previous definition
+        assertionFailure("WARNING: Overwriting existing definition for type \(T.self). This may cause unexpected behavior if you're relying on the previous definition
         
         _remove(definitionForKey: key)
       }
